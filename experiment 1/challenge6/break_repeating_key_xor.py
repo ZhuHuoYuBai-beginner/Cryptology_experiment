@@ -181,7 +181,7 @@ if __name__ == "__main__":
     expected_distance = 37
     actual_distance = hamming_distance(test_str1, test_str2)
     print(f"汉明距离验证: 预期={expected_distance}, 实际={actual_distance}")
-    print(f"验证结果: {'✅ 通过' if actual_distance == expected_distance else '❌ 失败'}\n")
+    print(f"验证结果: {'通过' if actual_distance == expected_distance else '失败'}\n")
 
     if actual_distance != expected_distance:
         print("汉明距离函数错误，无法继续破解！")

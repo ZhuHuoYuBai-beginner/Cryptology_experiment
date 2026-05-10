@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
     # 输出结果并验证
     print(f"加密结果(十六进制): {ciphertext_hex}")
-    print(f"验证结果: {'✅ 通过' if ciphertext_hex == expected_hex else '❌ 失败'}")
+    print(f"验证结果: {'通过' if ciphertext_hex == expected_hex else '失败'}")
 
     # 额外验证：异或运算的可逆性（用同一个函数解密）
     decrypted_plaintext = repeating_key_xor(ciphertext, key)

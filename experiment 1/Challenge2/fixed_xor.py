@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
     # 输出结果并验证
     print(f"异或结果(十六进制): {result_hex}")
-    print(f"验证结果: {'✅ 通过' if result_hex == expected_hex_output else '❌ 失败'}")
+    print(f"验证结果: {'通过' if result_hex == expected_hex_output else '失败'}")
 
     # 额外：解码为明文查看（本题解密后为英文句子）
     print(f"解密后明文: {result_bytes.decode('utf-8')}")
