@@ -36,10 +36,10 @@ Cryptology_experiment/
 | --- | --- | --- |
 | `Challenge1` | `hex_to_base64.py` | 将十六进制字符串转换为 Base64 字符串 |
 | `Challenge2` | `fixed_xor.py` | 对两个等长字节序列执行固定 XOR |
-| `challenge3` | `single_byte_xor.py` | 使用英文频率评分暴力破解单字节 XOR |
-| `challenge4` | `detect_single_byte_xor.py` | 在多行密文中检测被单字节 XOR 加密的一行 |
-| `challenge5` | `repeating_key_xor.py` | 使用重复密钥 XOR 进行加密/解密 |
-| `challenge6` | `break_repeating_key_xor.py` | 通过汉明距离猜测密钥长度并破解重复密钥 XOR |
+| `Challenge3` | `single_byte_xor.py` | 使用英文频率评分暴力破解单字节 XOR |
+| `Challenge4` | `detect_single_byte_xor.py` | 在多行密文中检测被单字节 XOR 加密的一行 |
+| `Challenge5` | `repeating_key_xor.py` | 使用重复密钥 XOR 进行加密/解密 |
+| `Challenge6` | `break_repeating_key_xor.py` | 通过汉明距离猜测密钥长度并破解重复密钥 XOR |
 | `SHA1` | `crack_sha1_password.py` | 根据键盘指纹候选字符枚举口令并匹配 SHA1 哈希 |
 
 ## 环境要求
