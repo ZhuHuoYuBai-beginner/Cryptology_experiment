@@ -15,14 +15,14 @@ Cryptology_experiment/
     │   └── hex_to_base64.py
     ├── Challenge2/
     │   └── fixed_xor.py
-    ├── challenge3/
+    ├── Challenge3/
     │   └── single_byte_xor.py
-    ├── challenge4/
+    ├── Challenge4/
     │   ├── 4.txt
     │   └── detect_single_byte_xor.py
-    ├── challenge5/
+    ├── Challenge5/
     │   └── repeating_key_xor.py
-    ├── challenge6/
+    ├── Challenge6/
     │   └── break_repeating_key_xor.py
     └── SHA1/
         ├── crack_sha1_password.py
