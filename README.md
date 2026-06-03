@@ -7,14 +7,7 @@
 
 > 本仓库仅用于课程实验、学习和授权环境下的安全研究，请勿用于未授权的口令破解或系统攻击。
 
-## 当前 Git 状态
 
-截至本次检查，仓库中已跟踪的内容主要是 `experiment 1`；下面这些内容目前还是未跟踪文件：
-
-- `experiment 2/`
-- `test.py`
-
-如果后续需要提交第二次实验内容，记得单独确认并加入版本控制。
 
 ## 仓库结构
 
@@ -40,30 +33,29 @@ Cryptology experiment/
 |       |-- crack_sha1_password.py
 |       |-- keyboard_fingerprints.png
 |       `-- mtc3-kitrub-07-sha1crack-en.pdf
-|-- experiment 2/
-|   |-- AES for Challenges/
-|   |   `-- aes_utils.py
-|   |-- AES KEY/
-|   |   |-- aes_bac_solution.py
-|   |   `-- mtc3-hick-01-BAC-en.pdf
-|   |-- Challenge1/
-|   |   `-- pkcs7_padding.py
-|   |-- Challenge2/
-|   |   `-- cbc_mode.py
-|   |-- Challenge3/
-|   |   `-- ecb_cbc_detection_oracle.py
-|   |-- Challenge4/
-|   |   `-- byte_at_a_time_ecb_simple.py
-|   |-- Challenge5/
-|   |   `-- ecb_cut_and_paste.py
-|   |-- Challenge6/
-|   |   `-- byte_at_a_time_ecb_harder.py
-|   |-- Challenge7/
-|   |   `-- pkcs7_padding_validation.py
-|   |-- Challenge8/
-|   |   `-- cbc_bit_flipping_attacks.py
-|   `-- 祝熠_24009290049_密码学实验二.docx
-`-- test.py
+`-- experiment 2/
+    |-- AES for Challenges/
+    |   `-- aes_utils.py
+    |-- AES KEY/
+    |   |-- aes_bac_solution.py
+    |   `-- mtc3-hick-01-BAC-en.pdf
+    |-- Challenge1/
+    |   `-- pkcs7_padding.py
+    |-- Challenge2/
+    |   `-- cbc_mode.py
+    |-- Challenge3/
+    |   `-- ecb_cbc_detection_oracle.py
+    |-- Challenge4/
+    |   `-- byte_at_a_time_ecb_simple.py
+    |-- Challenge5/
+    |   `-- ecb_cut_and_paste.py
+    |-- Challenge6/
+    |   `-- byte_at_a_time_ecb_harder.py
+    |-- Challenge7/
+    |   `-- pkcs7_padding_validation.py
+    `-- Challenge8/
+        `-- cbc_bit_flipping_attacks.py
+
 ```
 
 ## 实验一说明
@@ -131,8 +123,3 @@ python "experiment 1/Challenge6/break_repeating_key_xor.py"
 python "experiment 2/Challenge3/ecb_cbc_detection_oracle.py"
 python "experiment 2/AES KEY/aes_bac_solution.py"
 ```
-
-## 说明
-
-- `experiment 2/Challenge2/cbc_mode.py` 会优先尝试读取同目录下的 `10.txt`；如果该文件不存在，会回退到自带测试。
-- 仓库中包含 `.idea/`、`.venv/`、`__pycache__/` 等本地开发痕迹，如需整理版本控制，建议后续结合 `.gitignore` 一并清理。
