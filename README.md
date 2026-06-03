@@ -94,11 +94,6 @@ Cryptology experiment/
 | `Challenge6` | `byte_at_a_time_ecb_harder.py` | 在带固定随机前缀的情况下恢复 ECB 后缀 |
 | `Challenge7` | `pkcs7_padding_validation.py` | 验证 PKCS#7 填充是否合法 |
 | `Challenge8` | `cbc_bit_flipping_attacks.py` | 演示 CBC bit-flipping 攻击构造管理员权限 |
-
-### BAC/AES 附加题
-
-| 目录 | 脚本 | 作用 |
-| --- | --- | --- |
 | `AES KEY` | `aes_bac_solution.py` | 根据 BAC/MRZ 信息推导密钥并解出题目中的 AES-CBC 密文 |
 
 ## 环境要求
