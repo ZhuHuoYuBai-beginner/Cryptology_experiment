@@ -1,12 +1,12 @@
 # Cryptology Experiment
 
-用于密码学课程实验与基础密码分析练习的 Python 仓库，当前内容覆盖两部分：
+用于密码学课程实验与基础密码分析练习的 Python 仓库，当前内容覆盖三部分：
 
 - `experiment 1`：Cryptopals Set 1 风格的编码、XOR 与 SHA1 口令破解实验
 - `experiment 2`：围绕 AES-128、PKCS#7、ECB/CBC 模式与典型攻击场景的实验
+- `experiment 3`：围绕 RSA 基础实现与未加密消息分析的实验
 
 > 本仓库仅用于课程实验、学习和授权环境下的安全研究，请勿用于未授权的口令破解或系统攻击。
-
 
 
 ## 仓库结构
@@ -33,28 +33,36 @@ Cryptology experiment/
 |       |-- crack_sha1_password.py
 |       |-- keyboard_fingerprints.png
 |       `-- mtc3-kitrub-07-sha1crack-en.pdf
-`-- experiment 2/
-    |-- AES for Challenges/
-    |   `-- aes_utils.py
-    |-- AES KEY/
-    |   |-- aes_bac_solution.py
-    |   `-- mtc3-hick-01-BAC-en.pdf
+|-- experiment 2/
+|   |-- AES for Challenges/
+|   |   `-- aes_utils.py
+|   |-- AES KEY/
+|   |   |-- aes_bac_solution.py
+|   |   `-- mtc3-hick-01-BAC-en.pdf
+|   |-- Challenge1/
+|   |   `-- pkcs7_padding.py
+|   |-- Challenge2/
+|   |   `-- cbc_mode.py
+|   |-- Challenge3/
+|   |   `-- ecb_cbc_detection_oracle.py
+|   |-- Challenge4/
+|   |   `-- byte_at_a_time_ecb_simple.py
+|   |-- Challenge5/
+|   |   `-- ecb_cut_and_paste.py
+|   |-- Challenge6/
+|   |   `-- byte_at_a_time_ecb_harder.py
+|   |-- Challenge7/
+|   |   `-- pkcs7_padding_validation.py
+|   `-- Challenge8/
+|       `-- cbc_bit_flipping_attacks.py
+`-- experiment 3/
+    |-- RSA for Challenges/
+    |   `-- rsa_utils.py
     |-- Challenge1/
-    |   `-- pkcs7_padding.py
-    |-- Challenge2/
-    |   `-- cbc_mode.py
-    |-- Challenge3/
-    |   `-- ecb_cbc_detection_oracle.py
-    |-- Challenge4/
-    |   `-- byte_at_a_time_ecb_simple.py
-    |-- Challenge5/
-    |   `-- ecb_cut_and_paste.py
-    |-- Challenge6/
-    |   `-- byte_at_a_time_ecb_harder.py
-    |-- Challenge7/
-    |   `-- pkcs7_padding_validation.py
-    `-- Challenge8/
-        `-- cbc_bit_flipping_attacks.py
+    |   `-- implement_rsa.py
+    `-- Challenge2/
+       `-- minimum_unconcealed_messages.py
+    
 
 ```
 
@@ -96,6 +104,23 @@ Cryptology experiment/
 | `Challenge8` | `cbc_bit_flipping_attacks.py` | 演示 CBC bit-flipping 攻击构造管理员权限 |
 | `AES KEY` | `aes_bac_solution.py` | 根据 BAC/MRZ 信息推导密钥并解出题目中的 AES-CBC 密文 |
 
+## 实验三说明
+
+`experiment 3` 主要围绕 RSA 的基础实现与公开指数 `e` 的选择分析展开。
+
+### 公共工具
+
+| 目录 | 脚本 | 作用 |
+| --- | --- | --- |
+| `RSA for Challenges` | `rsa_utils.py` | 提供扩展欧几里得、模逆、RSA 加解密与未加密消息计数函数 |
+
+### 挑战脚本
+
+| 目录 | 脚本 | 作用 |
+| --- | --- | --- |
+| `Challenge1` | `implement_rsa.py` | 演示 RSA 密钥生成、加密和解密流程 |
+| `Challenge2` | `minimum_unconcealed_messages.py` | 求解使未加密消息数量最小的所有合法 `e` 之和 |
+
 ## 环境要求
 
 - Python 3.10 或更高版本
@@ -110,11 +135,13 @@ pip install requests
 
 ## 运行方式
 
-在仓库根目录下执行：
+在仓库根目录下执行，例如：
 
 ```bash
 python "experiment 1/Challenge1/hex_to_base64.py"
 python "experiment 1/Challenge6/break_repeating_key_xor.py"
 python "experiment 2/Challenge3/ecb_cbc_detection_oracle.py"
 python "experiment 2/AES KEY/aes_bac_solution.py"
+python "experiment 3/Challenge1/implement_rsa.py"
+python "experiment 3/Challenge2/minimum_unconcealed_messages.py"
 ```
