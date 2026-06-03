@@ -1,10 +1,11 @@
 # Cryptology Experiment
 
-用于密码学课程实验与基础密码分析练习的 Python 仓库，当前内容覆盖三部分：
+用于密码学课程实验与基础密码分析练习的 Python 仓库，当前内容覆盖四部分：
 
 - `experiment 1`：Cryptopals Set 1 风格的编码、XOR 与 SHA1 口令破解实验
 - `experiment 2`：围绕 AES-128、PKCS#7、ECB/CBC 模式与典型攻击场景的实验
 - `experiment 3`：围绕 RSA 基础实现与未加密消息分析的实验
+- `experiment 4`：围绕“密码挑战赛赛题三”的 RSA 截获帧分析与破译实验
 
 > 本仓库仅用于课程实验、学习和授权环境下的安全研究，请勿用于未授权的口令破解或系统攻击。
 
@@ -55,13 +56,17 @@ Cryptology experiment/
 |   |   `-- pkcs7_padding_validation.py
 |   `-- Challenge8/
 |       `-- cbc_bit_flipping_attacks.py
-`-- experiment 3/
-    |-- RSA for Challenges/
-    |   `-- rsa_utils.py
-    |-- Challenge1/
-    |   `-- implement_rsa.py
-    `-- Challenge2/
-       `-- minimum_unconcealed_messages.py
+|-- experiment 3/
+|   |-- RSA for Challenges/
+|   |   `-- rsa_utils.py
+|   |-- Challenge1/
+|   |   `-- implement_rsa.py
+|   `-- Challenge2/
+|      `-- minimum_unconcealed_messages.py
+`-- experiment 4/
+    |-- local_env.py
+    |-- requirements.txt
+    `-- solve_rsa_challenge3.py
     
 
 ```
@@ -121,16 +126,36 @@ Cryptology experiment/
 | `Challenge1` | `implement_rsa.py` | 演示 RSA 密钥生成、加密和解密流程 |
 | `Challenge2` | `minimum_unconcealed_messages.py` | 求解使未加密消息数量最小的所有合法 `e` 之和 |
 
+## 实验四说明
+
+`experiment 4` 主要围绕“密码挑战赛赛题三：RSA 加密体制破译”展开，目标是在仅掌握截获帧数据的情况下恢复明文与参数弱点。
+
+### 主要文件
+
+| 文件 | 作用 |
+| --- | --- |
+| `local_env.py` | 为实验四脚本加载本地依赖目录 |
+| `requirements.txt` | 复现实验四本地分析环境所需的第三方依赖清单 |
+| `solve_rsa_challenge3.py` | 主破解脚本，整合了同模不同指数、共享素因子、Fermat 分解与 Pollard p-1 等攻击 |
+
+
 ## 环境要求
 
 - Python 3.10 或更高版本
 - `experiment 1` 中部分脚本可能依赖 `requests`
 - `experiment 2` 当前脚本均可使用标准库运行
+- `experiment 4` 的主破解脚本可以直接使用标准库运行；如需复现实验过程中使用过的本地分析环境，可安装 `experiment 4/requirements.txt`
 
 安装依赖：
 
 ```bash
 pip install requests
+```
+
+如需复现实验四的本地依赖环境：
+
+```bash
+pip install -r "experiment 4/requirements.txt"
 ```
 
 ## 运行方式
@@ -144,4 +169,5 @@ python "experiment 2/Challenge3/ecb_cbc_detection_oracle.py"
 python "experiment 2/AES KEY/aes_bac_solution.py"
 python "experiment 3/Challenge1/implement_rsa.py"
 python "experiment 3/Challenge2/minimum_unconcealed_messages.py"
+python "experiment 4/solve_rsa_challenge3.py"
 ```

@@ -1,0 +1,8 @@
+# Optional helper packages used during local cryptanalysis exploration.
+# The current solve_rsa_challenge3.py script can run with Python standard library only,
+# but these packages were used to build the local analysis environment for experiment 4.
+
+gmpy2==2.3.0
+pycryptodome==3.23.0
+pyecm==0.0.3
+numpy==2.4.6
